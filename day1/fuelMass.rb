@@ -7,9 +7,10 @@ end
 def findFuelMass(initialAmount)
   totalFuel = calc(initialAmount).negative? ? 0 : calc(initialAmount)
 
-  if (totalFuel > 0 ) 
+  if totalFuel > 0
     totalFuel += findFuelMass(totalFuel)
   end 
+
   totalFuel
 end 
 
