@@ -1,15 +1,3 @@
-# Positions 
-# [0] - position of the OPCODE 
-# [1] - position of the first input 
-# [2] - position of the second input 
-# [3] - position of the output (overwrite existing value in the position)
-# ! Remember that these positions are relative to the 
-
-#OPCODES 
-# 1 - add the two inputs (values in [2][3])
-# 2 - multiply two inputs (values in[2][3])
-# 99 - halt
-
 def add(a,b)
   a + b
 end 
