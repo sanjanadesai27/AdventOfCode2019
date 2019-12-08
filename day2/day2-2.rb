@@ -1,3 +1,5 @@
+DESIRED_VAL = 19690720
+
 def add(a,b)
   a + b
 end 
@@ -21,8 +23,16 @@ def intcode(arr)
 end 
 
 def main 
-  inputArr = File.read("input.txt").split(',').map(&:to_i)
-  puts intcode(inputArr).to_s
+  100.times do |i|
+    100.times do |j|
+      inputArr = File.read("input.txt").split(',').map(&:to_i)
+      inputArr[1] = i 
+      inputArr[2] = j
+      intcode(inputArr)
+      puts 100 * i + j if inputArr[0] == DESIRED_VAL
+    end 
+  end 
+
 end 
 
 main
